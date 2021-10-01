@@ -1,0 +1,33 @@
+{
+  "name": "fisheye",
+  "version": "1.0.0",
+  "description": "Website that promote freelance photographers and put the spotlight on their works",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alb-devv/AlbanPoulet_6_270821.git"
+  },
+  "keywords": [
+    "photographers",
+    "-",
+    "artists",
+    "-",
+    "freelance",
+    "-",
+    "work",
+    "for",
+    "hire"
+  ],
+  "author": "Alban P for OPC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alb-devv/AlbanPoulet_6_270821/issues"
+  },
+  "homepage": "https://github.com/Alb-devv/AlbanPoulet_6_270821#readme",
+  "dependencies": {
+    "sass": "^1.41.1"
+  }
+}
