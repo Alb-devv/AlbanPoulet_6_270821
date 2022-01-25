@@ -1,15 +1,17 @@
 *,
-*::after,
-*::before {
-  margin: 0;
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+  margin:0 auto;
+}
+
+ul {
   padding: 0;
-  box-sizing: inherit;
+  margin: 0;
+  list-style-type: none;
 }
-
-body, html{height:100%;}
-body{
-text-align:center;
-box-sizing: border-box;
-background: #ffff;
-}
-

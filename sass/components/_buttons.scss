@@ -1,0 +1,37 @@
+.button {
+  border-radius: 5px;
+  background: $color-primary-red;
+  color: white;
+  &-tag {
+    box-sizing: border-box;
+    border-radius: 11px;
+    border: 0.5px solid #C4C4C4;
+    color: $color-primary-red;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 0rem 1rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    &:hover {
+      cursor: pointer;
+      border: 0.5px solid transparent;
+      background-color: $color-primary-red;
+      color: white;
+    }
+    &:focus {
+      border: 1px solid red;
+      background-color: $color-primary-red;
+      color: white;
+    }
+  }
+  &:hover {
+    background: $color-primary-salmon;
+    color: black;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,67 @@
+.hidden-link {
+  transform: translate(-50%, 0);
+  width: auto;
+  display:none;
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  color: white;
+  background-color: $color-primary-red;
+  padding: 1px 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  &:hover {
+    background-color: $color-primary-salmon;
+    color: black;
+  }
+}
+
+.artists {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  & .photographe {
+    padding:10px;
+    margin:10px;
+    text-align: center;
+    &:hover {
+      border: 0.5px solid transparent;
+      background-color: $color-secondary-light-grey;
+    }
+    &  a:focus h2  { 
+      border: 1px solid red;
+      color: white;
+      background-color: $color-primary-red;
+    }
+    &__location {
+      color : $color-primary-red;
+    }
+    &__taglist { /* idem __filters__navigation pourait etre regroupé */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 0.3rem;
+    }
+    &__img {
+      border-radius: 50%;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .artists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .artists {
+    display: block;
+  }
+}

@@ -1,0 +1,35 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1em 2rem 1rem;
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__filters__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.3rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .page-header {
+    flex-wrap: wrap;
+    margin: 0 4rem;
+    &__link {
+      order: 1;
+    }
+    &__title {
+      order: 2;
+      font-size: 1.7rem;
+    }
+    &__nav {
+      order: 3;
+      flex-basis: 100%;
+    }
+  }
+}

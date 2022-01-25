@@ -1,19 +1,19 @@
-@import "./utils/_variables";
-// @import "./utils/functions";
-@import "./utils/_mixins";
-// @import "./utils/extensions";
 
-@import "./utils/animation";
 
-@import "./base/_base";
-@import "./base/_typography";
+@import "./base/base";
+@import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/lightbox";
 
-@import "./layout/header";
-@import "./layout/footer";
+@import "./layout/page-header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
 
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
 
-@import "./pages/_home";
-@import "./pages/_menubase";
-
+@import "./pages/index";
+@import "./pages/artist-profile";

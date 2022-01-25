@@ -1,0 +1,254 @@
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px 0;
+}
+
+.profile-main-datas {   
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding : 40px;
+  background-color: $color-secondary-light-grey;
+  &__content {
+    & .title {
+    color: $color-primary-salmon;
+    font-size: 2.2em;
+    margin: 0;
+    }
+    & .localization {
+    color: $color-secondary-grey-color;
+    font-size: 1.4em;
+    margin-top: 0.2rem;
+    }
+    & .tagline {
+    color: $color-secondary-grey;
+    font-size: 1.1em;
+    margin-top: 1.2rem;
+    }
+    & .taglist {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 0.5rem 0.3rem;
+    }
+    & .photo {
+    justify-self: end;
+    margin-right: 2rem;
+    }
+  }
+  &__contact { 
+  text-align: left;
+    & .button { 
+    background-color: $color-secondary-grey-color;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: auto;
+    padding : 6px 5px;
+    position:relative;
+    left : -200px;
+      &:focus {
+      border: 2px solid $color-primary-salmon;
+      border: 1px solid red;
+      }
+      &:hover {
+      background-color: $color-primary-salmon;
+      color : black;
+      }
+    }
+    display: none;
+  }
+  &__photo {
+   & img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit:cover;
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+   }
+  }
+}
+
+.profile-secondary-datas {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 3rem;
+  color: black;
+  background-color: $color-primary-salmon;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-size: 1.2em;
+  font-weight: bold;
+    &__aside {
+    display: flex;
+    align-items: center;
+      & .total-likes {
+      padding-right : 10px;
+      }
+	}
+}
+
+.profile-gallery { 
+  display: block;
+  grid-template-columns: 1fr;
+    &__media {
+    width: 100%;
+    height: 190px;
+	border-radius: 5px;
+	object-fit: cover;
+	cursor: pointer;
+	  &:focus {
+	  border: 1px solid red;
+	}
+    & .footer {
+    display: flex;
+    justify-content: space-between;
+    color: $color-secondary-grey-color;
+      & .like-section{
+      display: flex;
+        &-counter {
+        padding: 3px 3px 0 0;
+        }
+        &-button {
+        border: none;
+        color: $color-secondary-grey-color;
+        background: none;
+        font-size: 1.6rem; 
+        cursor:pointer;
+          &:focus {
+          border: none;  
+          }
+        }
+      }
+    }
+   }
+}
+
+
+.gallery-sort {
+  display: inline;
+  margin-bottom: 3rem;
+   label {
+   font-weight: bold;
+   }
+   &__menu {
+   border: none;
+   border-radius: 5px;
+   color: white;
+   background-color: $color-primary-red;
+   font-size: 1.1em;
+   margin: 1.5rem 0 0 0.5rem;
+   padding: 0.5rem 0.4rem;
+   cursor: pointer;
+   }
+}
+
+@media (min-width: 400px) {
+  .profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  &__media {
+  height: 200px;	
+  }
+ }
+}
+
+@media (min-width: 992px) {
+  .profile-main-datas {
+  width: 100%;
+   &__contact { 
+   display: block;
+   }
+  }
+
+  .profile-gallery {
+  grid-template-columns: repeat(3, 1fr);
+    &__media {
+    height: 350px;
+    }     
+  }
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none; 
+  position: fixed; 
+  left: 0;
+  top: 0;
+  overflow: auto; 
+   &-content {
+   width: 80%;
+   max-width: 400px;
+   background-color: $color-primary-salmon;
+   margin: 20px auto;
+   padding: 5px 20px;
+   }
+   &-page-header {
+   display: flex;
+   justify-content: space-between;
+    &-title {
+    color: black;
+    font-size: 2.6em;
+    }
+    &-close {
+    color: white;
+    font-size: 5em;  
+     &:hover,
+     &:focus {
+     text-decoration: none;
+     color: #000;
+     cursor: pointer;
+     }
+    }
+   }
+}
+.form {
+  &-ligne {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  } 
+  &-label {
+  font-size: 1.5em;
+  } 
+  &-button {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  border:none;
+  border-radius: 5px;
+  padding: 0.2em 1em;
+  background-color:$color-primary-red; 
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+   &:focus {
+   border: 2px solid $color-primary-salmon;
+   }
+   &:hover {
+   background-color: $color-primary-salmon
+   }
+  }
+}
+
+.error{
+  display: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding-top : 1em;
+}
+  
+.displayError{
+  display:block;
+}
