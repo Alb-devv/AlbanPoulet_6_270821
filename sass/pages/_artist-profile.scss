@@ -1,7 +1,12 @@
+body {
+  padding-left: 100px;
+padding-right: 100px;
+}
+
+
 .profile-content {
   display: flex;
   flex-direction: column;
-  padding: 5px 20px 0;
 }
 
 .profile-main-datas {   
@@ -164,7 +169,6 @@
 
 @media (min-width: 992px) {
   .profile-main-datas {
-  width: 100%;
    &__contact { 
    display: block;
    }

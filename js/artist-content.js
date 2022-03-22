@@ -29,7 +29,7 @@ class artistContent {
   }
 
   get artistProfileContent() {
-   return `<div class="">
+   return `<div class="text-part">
              <h1 class="profile-main-datas__content-title" id="identificationPhotographe">${this.name}</h1>
              <p class="profile-main-datas__content-localization">${this.city}, ${this.country}</p>
              <p class="profile-main-datas__content-tagline">${this.tagline}</p>
